@@ -1,13 +1,19 @@
 public class Finder {
    public String Str;
-
+   //Конструктор без аргументов
    public Finder () {
       Str = "1 2 2 3 4 5 6 5 5 7 8";
    }
+   //Конструктор с аргументами
    public Finder (String str) {
       Str = str;
    }
+   //Конструктор копирования
+   public Finder (Finder finder) {
+      this.Str = finder.Str;
+   }
 
+   //метод
    void FindNumber () {
       String[] splitStr = Str.split(" ");
       int [] arr = new int[splitStr.length];

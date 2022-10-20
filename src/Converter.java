@@ -3,16 +3,24 @@ public class Converter {
     public int one_size;
     public int[] one_matrix;
 
+    //Конструктор без аргументов
     public Converter() {
         size = 3;
         one_size = 8;
         one_matrix = new int[] {1, 2, 3, 4, 5, 6, 7, 8};
 
     }
+    //Конструктор с аргументами
     public Converter(int size_Constr, int one_size_Constr, int[] one_matrix_Constr) {
         size = size_Constr;
         one_size = one_size_Constr;
         one_matrix = one_matrix_Constr;
+    }
+    //Конструктор копирования
+    public Converter (Converter converter) {
+        this.size = converter.size;
+        this.one_size = converter.one_size;
+        this.one_matrix = converter.one_matrix;
     }
 
     private int line = 0;
@@ -21,7 +29,7 @@ public class Converter {
     private int y = 0;
     private int dirChanges = 0;
 
-
+    //метод
     void convertMatrix () {
         int counter = size;
         int[][] matrix = new int[size][size];
